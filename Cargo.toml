@@ -1,0 +1,15 @@
+[package]
+name          = "rust_de_morgan"
+version       = "0.1.0"
+edition       = "2021"
+authors       = ["kanarus <kanarus786@gmail.com>"]
+documentation = "https://docs.rs/rust_de_morgan"
+homepage      = "https://crates.io/crates/rust_de_morgan"
+repository    = "https://github.com/kana-rus/rust_de_morgan"
+readme        = "README.md"
+license       = "MIT"
+description   = ""
+keywords      = []
+categories    = []
+
+[dependencies]
