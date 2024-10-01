@@ -7,9 +7,9 @@ macro_rules! static_assert {
     };
 }
 
-macro_rules! for_all_cominations_of_two_bools {
+macro_rules! for_all_combinations_of_two_bools {
     (($P:ident, $Q:ident) => $proc:expr) => {
-        for_all_cominations_of_two_bools! {
+        for_all_combinations_of_two_bools! {
             @($P, $Q) in checked[
                 (true,  true ),
                 (true,  false),
@@ -34,7 +34,7 @@ macro_rules! for_all_cominations_of_two_bools {
 }
 
 const fn main() {
-    for_all_cominations_of_two_bools! {(P, Q) => {
+    for_all_combinations_of_two_bools! {(P, Q) => {
         static_assert!({!(P || Q)} == {(!P) && (!Q)});
         static_assert!({!(P && Q)} == {(!P) || (!Q)});
     }}
