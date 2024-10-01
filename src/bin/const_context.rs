@@ -35,7 +35,7 @@ macro_rules! for_all_cominations_of_two_bools {
 
 const fn main() {
     for_all_cominations_of_two_bools! {(P, Q) => {
-        static_assert!(!(P || Q) == (!P && !Q));
-        static_assert!(!(P && Q) == (!P || !Q));
+        static_assert!((!(P || Q)) == (!P && !Q));
+        static_assert!((!(P && Q)) == (!P || !Q));
     }}
 }
