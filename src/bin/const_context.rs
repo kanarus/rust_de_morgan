@@ -13,7 +13,7 @@ macro_rules! for_all_cominations_of_two_bools {
             @for ($P, $Q) in checked[
                 (true,  true ),
                 (true,  false),
-                (false, true),
+                (false, true ),
                 (false, false)
             ] {
                 $proc
