@@ -65,7 +65,7 @@ fn __de_morgan_s_law_2__<P: Variable, Q: Variable>() ->
     {
         /// P ∨ ¬P
         fn excluded_middle<P: Variable>() -> Or<P, Not<P>> {
-            unreachable!("axios")
+            unreachable!("axiom")
         }
 
         Imply! {(notAndPQ: Not<And<P, Q>>) =>
