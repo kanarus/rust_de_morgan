@@ -10,7 +10,7 @@ macro_rules! static_assert {
 macro_rules! for_all_cominations_of_two_bools {
     (($P:ident, $Q:ident) => $proc:expr) => {
         for_all_cominations_of_two_bools! {
-            @for ($P, $Q) in checked[
+            @($P, $Q) in checked[
                 (true,  true ),
                 (true,  false),
                 (false, true ),
@@ -20,7 +20,7 @@ macro_rules! for_all_cominations_of_two_bools {
             }
         }
     };
-    (@for ($P:ident, $Q:ident) in checked[$( ($p:literal, $q:literal) ),*] $proc:expr) => {
+    (@($P:ident, $Q:ident) in checked[$( ($p:literal, $q:literal) ),*] $proc:expr) => {
         fn __assert_exausted__(p: bool, q: bool) {
             match (p, q) {$(
                 ($p, $q) => {
